@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Nucleo.Modelos
 {
-    public class EntradaDeLog
+    public class EntradaLog
     {
         private int id = -1;
         private Usuario usuario;
@@ -12,7 +12,7 @@ namespace Nucleo.Modelos
         private TipoEntradaLog tipoEntradaLog;
         private string descripcion;
 
-        public EntradaDeLog(int id, Usuario usuario, DateTime fechaHora, TipoEntradaLog tipoEntradaLog, string descripcion)
+        public EntradaLog(int id, Usuario usuario, DateTime fechaHora, TipoEntradaLog tipoEntradaLog, string descripcion)
         {
             this.usuario = usuario;
             this.fechaHora = fechaHora;

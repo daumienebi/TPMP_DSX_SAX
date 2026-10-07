@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TestProjectManagementPlatform.Nucleo.Seguridad;
+using Nucleo.Seguridad;
 
 namespace Nucleo.Modelos
 {
@@ -15,7 +15,7 @@ namespace Nucleo.Modelos
         private bool activo;
         private DateTime fechaCaducidad;
         private ResultadoHash password;
-        private int pin; // Hay que cifrarlo?
+        private int pin;
 
         public Usuario(string nombre, string apellidos, string email, Rol rol, bool activo, DateTime fechaCaducidad)
         {
@@ -25,8 +25,6 @@ namespace Nucleo.Modelos
             this.rol = rol;
             this.activo = activo;
             this.fechaCaducidad = fechaCaducidad;
-            //password?
-            //pin?
         }
 
         public int Id { get => id; set => id = value; }
@@ -51,20 +49,23 @@ namespace Nucleo.Modelos
 
         public override string ToString()
         {
-            return this.id + " " + this.nombre + " " + this.apellidos + " " + this.email;
+            return $"Usuario: {id} - {nombre} {apellidos} ({email})";
         }
 
-        /* commentario*/
-        public bool comprobarContrasena(ResultadoHash password) {
+        /* comprueba si la contraseña es correcta */
+        public bool comprobarContrasena(String password) {
+            // primero volver a generar el hash de la contraseña introducida utilizando
+            // la sal almacenada y luego comparar el hash generado con el almacenado 
+            // para ver si son iguales. Si son iguales, la contraseña es correcta, de lo contrario no lo es.
             return false;
         }
 
         /*
             Metodo que sirve para cambiar la contraseña del usuario
         */
-        public bool cambiarContrasena(ResultadoHash passwordAnterior, ResultadoHash passwordNuevo) {
-            // primero comprobar si la contraseña anterior era correcto
-            
+        public bool cambiarContrasena(String passwordAnterior, String passwordNuevo) {
+            // primero comprobar si la contraseña anterior y luego
+            // generar el hash de la nueva contraseña y almacenarlo
             return false;
         }
 
@@ -105,7 +106,4 @@ namespace Nucleo.Modelos
             return -1;
         }
     }
-
-
-
 }

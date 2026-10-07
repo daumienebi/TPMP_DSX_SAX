@@ -15,4 +15,8 @@
     <Folder Include="Seguridad\Servicios\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nucleo\Nucleo.csproj" />
+  </ItemGroup>
+
 </Project>
