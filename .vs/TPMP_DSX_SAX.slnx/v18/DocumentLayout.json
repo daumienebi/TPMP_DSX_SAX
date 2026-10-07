@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\modelos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\modelos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\nucleo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\nucleo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\modelos\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\modelos\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\Rol.cs",
+              "RelativeDocumentMoniker": "Nucleo\\Modelos\\Rol.cs",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\Rol.cs",
+              "RelativeToolTip": "Nucleo\\Modelos\\Rol.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T09:31:03.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.cs",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\App.cs",
+              "RelativeDocumentMoniker": "Nucleo\\App.cs",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\App.cs",
+              "RelativeToolTip": "Nucleo\\App.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T09:30:12.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Nucleo",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Nucleo.csproj",
+              "RelativeDocumentMoniker": "Nucleo\\Nucleo.csproj",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Nucleo.csproj",
+              "RelativeToolTip": "Nucleo\\Nucleo.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-07T09:29:58.776Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\Usuario.cs",
+              "RelativeDocumentMoniker": "Nucleo\\Modelos\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\Usuario.cs",
+              "RelativeToolTip": "Nucleo\\Modelos\\Usuario.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-07T09:12:01.077Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,0 +1,13 @@
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\bin\Debug\net10.0\Nucleo.deps.json
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\bin\Debug\net10.0\Nucleo.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\bin\Debug\net10.0\Nucleo.pdb
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.AssemblyInfoInputs.cache
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.AssemblyInfo.cs
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.csproj.CoreCompileInputs.cache
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.sourcelink.json
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\refint\Nucleo.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.pdb
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\ref\Nucleo.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.csproj.Up2Date

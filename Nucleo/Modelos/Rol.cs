@@ -13,7 +13,7 @@ namespace Nucleo.Modelos
         // Implementar ACL para los permisis
         // no hacerlos como lo maneja testlink
 
-        public Rol(int id, string nombre, string descripcion)
+        public Rol(string nombre, string descripcion)
         {
             this.nombre = nombre;
             this.descripcion = descripcion;
