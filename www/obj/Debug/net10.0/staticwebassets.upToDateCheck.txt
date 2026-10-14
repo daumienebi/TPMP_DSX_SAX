@@ -30,6 +30,7 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\boo
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\css\login.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery-validation\LICENSE.md
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery\dist\jquery.slim.min.map
@@ -40,17 +41,18 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\favicon
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\css\site.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery\dist\jquery.min.map
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\css\principal.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery\dist\jquery.slim.js
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\css\password.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -60,7 +62,9 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\boo
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
-wwwroot\css\site.css
+wwwroot\css\login.css
+wwwroot\css\password.css
+wwwroot\css\principal.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\LICENSE

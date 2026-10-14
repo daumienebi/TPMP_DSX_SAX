@@ -19,10 +19,7 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\scopedcss\bundle\www.styles.css
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\scopedcss\projectbundle\www.bundle.scp.css
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\jyin3knxk8-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\hp8mgrpb8w-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\7qmsnifm3i-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\up783gpdmh-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -84,8 +81,6 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\mpvffg4vmz-{0}-muycvpuwrr-muycvpuwrr.gz
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\frzpcpqmjc-{0}-87fc7y1x7t-87fc7y1x7t.gz
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\pgv2qq0yfi-{0}-mlv21k5csn-mlv21k5csn.gz
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\smoqhxch0c-{0}-fsxkhyyxs7-fsxkhyyxs7.gz
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\v1o9jul3n8-{0}-fsxkhyyxs7-fsxkhyyxs7.gz
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\staticwebassets.development.json
@@ -103,3 +98,6 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\bin\Debug\net10
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\bin\Debug\net10.0\Backend.pdb
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\bin\Debug\net10.0\Nucleo.pdb
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\www.csproj.AssemblyReference.cache
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\emjk90ybwv-{0}-8s50vlh16q-8s50vlh16q.gz
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\rbgcuv7r11-{0}-ujs34pj1bs-ujs34pj1bs.gz
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\obj\Debug\net10.0\compressed\o052b4tdhp-{0}-3r8b2a0bt1-3r8b2a0bt1.gz

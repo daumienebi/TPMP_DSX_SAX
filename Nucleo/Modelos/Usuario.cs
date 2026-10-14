@@ -32,6 +32,14 @@ namespace Nucleo.Modelos
             this.rol = rol;
             this.activo = activo;
             this.fechaCaducidad = fechaCaducidad;
+            
+        }
+
+        public Usuario(String nombre, string apellidos, String email, string password) {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.email = email;
+            this.password = ServicioHash.Generar(password); // Generar el hash de la contraseña al crear el usuario 
         }
 
         public int Id { get => id; set => id = value; }

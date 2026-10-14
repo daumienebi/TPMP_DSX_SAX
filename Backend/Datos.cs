@@ -1,4 +1,4 @@
-﻿using BackEnd;
+﻿using Backend;
 using Nucleo.Modelos;
 
 namespace Backend
@@ -146,11 +146,11 @@ namespace Backend
         #endregion
         public void Reiniciar()
         {
-            // meter un par de datos aqui para poder probar luego al arrancar
-            // la aplicacion
-
-            // luego podemos quitar todos los datos que hay y agregar unos nuevos
-            throw new NotImplementedException();
+            // Agregar un par de usuarios de prueba que estaran disponibles al iniciar la aplicacion
+            Usuario u1 = new Usuario("Juan", "Pérez", "a@a.com", "password1");
+            Usuario u2 = new Usuario("María", "Gómez", "b@b.com", "password2");
+            GuardarUsuario(u1);
+            GuardarUsuario(u2);
         }
     }
 }
