@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "www/1.0.0": {
+        "dependencies": {
+          "Backend": "1.0.0",
+          "Nucleo": "1.0.0"
+        },
+        "runtime": {
+          "www.dll": {}
+        }
+      },
+      "Backend/1.0.0": {
+        "dependencies": {
+          "Nucleo": "1.0.0"
+        },
+        "runtime": {
+          "Backend.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Nucleo/1.0.0": {
+        "runtime": {
+          "Nucleo.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "www/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Backend/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Nucleo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

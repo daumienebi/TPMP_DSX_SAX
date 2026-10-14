@@ -1,0 +1,16 @@
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\bin\Debug\net10.0\Backend.deps.json
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\bin\Debug\net10.0\Backend.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\bin\Debug\net10.0\Backend.pdb
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\bin\Debug\net10.0\Nucleo.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\bin\Debug\net10.0\Nucleo.pdb
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.csproj.AssemblyReference.cache
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.AssemblyInfoInputs.cache
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.AssemblyInfo.cs
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.sourcelink.json
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.csproj.Up2Date
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\refint\Backend.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\Backend.pdb
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Backend\obj\Debug\net10.0\ref\Backend.dll

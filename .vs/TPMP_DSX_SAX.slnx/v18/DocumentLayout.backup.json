@@ -3,52 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\modelos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\modelos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AFAAF47-5DE2-4AB4-BFA7-33D65DA8373B}|www\\www.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\www\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AFAAF47-5DE2-4AB4-BFA7-33D65DA8373B}|www\\www.csproj|solutionrelative:www\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\modelos\\tipoentradalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\modelos\\tipoentradalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AFAAF47-5DE2-4AB4-BFA7-33D65DA8373B}|www\\www.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\www\\pages\\login\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AFAAF47-5DE2-4AB4-BFA7-33D65DA8373B}|www\\www.csproj|solutionrelative:www\\pages\\login\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E453DDDB-F08C-431F-8BE1-2F4484DAD4BC}|Backend\\Backend.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\backend\\datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E453DDDB-F08C-431F-8BE1-2F4484DAD4BC}|Backend\\Backend.csproj|solutionrelative:backend\\datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AFAAF47-5DE2-4AB4-BFA7-33D65DA8373B}|www\\www.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\www\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3AFAAF47-5DE2-4AB4-BFA7-33D65DA8373B}|www\\www.csproj|solutionrelative:www\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FCC9516-708B-42A6-B4A5-DC85282B5BAE}|NucleoTest\\NucleoTest.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleotest\\seguridad\\serviciocifradotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FCC9516-708B-42A6-B4A5-DC85282B5BAE}|NucleoTest\\NucleoTest.csproj|solutionrelative:nucleotest\\seguridad\\serviciocifradotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\seguridad\\serviciocifrado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\seguridad\\serviciocifrado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\seguridad\\serviciohash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\seguridad\\serviciohash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FCC9516-708B-42A6-B4A5-DC85282B5BAE}|NucleoTest\\NucleoTest.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleotest\\seguridad\\serviciohashtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FCC9516-708B-42A6-B4A5-DC85282B5BAE}|NucleoTest\\NucleoTest.csproj|solutionrelative:nucleotest\\seguridad\\serviciohashtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FCC9516-708B-42A6-B4A5-DC85282B5BAE}|NucleoTest\\NucleoTest.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleotest\\seguridad\\resultadohashtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FCC9516-708B-42A6-B4A5-DC85282B5BAE}|NucleoTest\\NucleoTest.csproj|solutionrelative:nucleotest\\seguridad\\resultadohashtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\seguridad\\serviciocontrasenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\seguridad\\serviciocontrasenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\seguridad\\resultadohash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\seguridad\\resultadohash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E453DDDB-F08C-431F-8BE1-2F4484DAD4BC}|Backend\\Backend.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\backend\\idatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E453DDDB-F08C-431F-8BE1-2F4484DAD4BC}|Backend\\Backend.csproj|solutionrelative:backend\\idatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AFAAF47-5DE2-4AB4-BFA7-33D65DA8373B}|www\\www.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\www\\www.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3AFAAF47-5DE2-4AB4-BFA7-33D65DA8373B}|www\\www.csproj|solutionrelative:www\\www.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\www\\Pages\\Login\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "www\\Pages\\Login\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\www\\Pages\\Login\\Index.cshtml.cs",
+              "RelativeToolTip": "www\\Pages\\Login\\Index.cshtml.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T15:22:26.098Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -67,157 +48,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\Usuario.cs",
-              "RelativeDocumentMoniker": "Nucleo\\Modelos\\Usuario.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\Usuario.cs",
-              "RelativeToolTip": "Nucleo\\Modelos\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\www\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "www\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\www\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "www\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAkAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T16:13:03.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TipoEntradaLog.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\TipoEntradaLog.cs",
-              "RelativeDocumentMoniker": "Nucleo\\Modelos\\TipoEntradaLog.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\TipoEntradaLog.cs",
-              "RelativeToolTip": "Nucleo\\Modelos\\TipoEntradaLog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T16:12:58.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ServicioHashTest.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\NucleoTest\\Seguridad\\ServicioHashTest.cs",
-              "RelativeDocumentMoniker": "NucleoTest\\Seguridad\\ServicioHashTest.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\NucleoTest\\Seguridad\\ServicioHashTest.cs",
-              "RelativeToolTip": "NucleoTest\\Seguridad\\ServicioHashTest.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T16:05:13.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ServicioHash.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ServicioHash.cs",
-              "RelativeDocumentMoniker": "Nucleo\\Seguridad\\ServicioHash.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ServicioHash.cs",
-              "RelativeToolTip": "Nucleo\\Seguridad\\ServicioHash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T16:00:44.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ServicioCifradoTest.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\NucleoTest\\Seguridad\\ServicioCifradoTest.cs",
-              "RelativeDocumentMoniker": "NucleoTest\\Seguridad\\ServicioCifradoTest.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\NucleoTest\\Seguridad\\ServicioCifradoTest.cs",
-              "RelativeToolTip": "NucleoTest\\Seguridad\\ServicioCifradoTest.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T15:31:01.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ServicioCifrado.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ServicioCifrado.cs",
-              "RelativeDocumentMoniker": "Nucleo\\Seguridad\\ServicioCifrado.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ServicioCifrado.cs",
-              "RelativeToolTip": "Nucleo\\Seguridad\\ServicioCifrado.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T15:34:42.065Z",
+              "WhenOpened": "2026-10-14T15:07:01.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Datos.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Backend\\Datos.cs",
-              "RelativeDocumentMoniker": "Backend\\Datos.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Backend\\Datos.cs",
-              "RelativeToolTip": "Backend\\Datos.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAzwGMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T14:53:03.222Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\www\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "www\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\www\\Pages\\Index.cshtml",
+              "RelativeToolTip": "www\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T15:01:25.501Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ServicioContrasenas.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ServicioContrasenas.cs",
-              "RelativeDocumentMoniker": "Nucleo\\Seguridad\\ServicioContrasenas.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ServicioContrasenas.cs",
-              "RelativeToolTip": "Nucleo\\Seguridad\\ServicioContrasenas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T15:59:58.664Z",
+              "DocumentIndex": 3,
+              "Title": "www",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\www\\www.csproj",
+              "RelativeDocumentMoniker": "www\\www.csproj",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\www\\www.csproj",
+              "RelativeToolTip": "www\\www.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-14T14:59:54.943Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ResultadoHashTest.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\NucleoTest\\Seguridad\\ResultadoHashTest.cs",
-              "RelativeDocumentMoniker": "NucleoTest\\Seguridad\\ResultadoHashTest.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\NucleoTest\\Seguridad\\ResultadoHashTest.cs",
-              "RelativeToolTip": "NucleoTest\\Seguridad\\ResultadoHashTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T15:59:19.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ResultadoHash.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ResultadoHash.cs",
-              "RelativeDocumentMoniker": "Nucleo\\Seguridad\\ResultadoHash.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ResultadoHash.cs",
-              "RelativeToolTip": "Nucleo\\Seguridad\\ResultadoHash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T15:43:04.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "copilot-instructions.md",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\.github\\copilot-instructions.md",
-              "RelativeDocumentMoniker": ".github\\copilot-instructions.md",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\.github\\copilot-instructions.md",
-              "RelativeToolTip": ".github\\copilot-instructions.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-10-07T15:56:51.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IDatos.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Backend\\IDatos.cs",
-              "RelativeDocumentMoniker": "Backend\\IDatos.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Backend\\IDatos.cs",
-              "RelativeToolTip": "Backend\\IDatos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-07T14:50:01.486Z"
             }
           ]
         }
