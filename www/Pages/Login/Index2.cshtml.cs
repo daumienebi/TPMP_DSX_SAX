@@ -13,6 +13,7 @@ public class Index2Model : PageModel
 
     public Index2Model(IDatos datos)
     {
+        datos = new Datos();
         _datos = datos;
     }
 

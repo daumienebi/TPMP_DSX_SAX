@@ -24,7 +24,7 @@ namespace Nucleo.Modelos
         private const int minValuePin = 1000; // valor mínimo del PIN (4 dígitos)
         private const int maxValuePin = 10_000; // valor máximo del PIN (4 dígitos)
 
-        public Usuario(string nombre, string apellidos, string email, Rol rol, bool activo, DateTime fechaCaducidad)
+        public Usuario(string nombre, string apellidos, string email, Rol rol, bool activo, DateTime fechaCaducidad,string password)
         {
             this.nombre = nombre;
             this.apellidos = apellidos;
@@ -32,14 +32,16 @@ namespace Nucleo.Modelos
             this.rol = rol;
             this.activo = activo;
             this.fechaCaducidad = fechaCaducidad;
-            
+            this.password = ServicioHash.Generar(password); // Generar el hash de la contraseña al crear el usuario
+
         }
 
         public Usuario(String nombre, string apellidos, String email, string password) {
             this.nombre = nombre;
             this.apellidos = apellidos;
             this.email = email;
-            this.password = ServicioHash.Generar(password); // Generar el hash de la contraseña al crear el usuario 
+            // Generar el hash de la contraseña al crear el usuario 
+            this.password = ServicioHash.Generar(password); 
         }
 
         public int Id { get => id; set => id = value; }
@@ -65,11 +67,10 @@ namespace Nucleo.Modelos
         public override string ToString()
         {
             // No incluimos información sensible como el password o pin etc..
-            string rolTexto = rol?.ToString() ?? "Sin rol";
+            string rolTexto = rol?.Nombre ?? "Sin rol";
             string nombreCompleto = $"{nombre ?? string.Empty} {apellidos ?? string.Empty}".Trim();
             string activoTexto = activo ? "Activo" : "Inactivo";
             string fechaTexto = fechaCaducidad == default ? "Sin fecha" : fechaCaducidad.ToString("yyyy-MM-dd");
-
             return $"Usuario: {id} - {nombreCompleto} ({email ?? "sin-email"}) | {rolTexto} | {activoTexto} | Caduca: {fechaTexto}";
         }
 

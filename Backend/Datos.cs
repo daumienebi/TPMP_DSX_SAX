@@ -5,17 +5,26 @@ namespace Backend
 {
     public class Datos : IDatos
     {
-        public Dictionary<int, Usuario> Usuarios => new Dictionary<int, Usuario>();
+        // Colecciones persistentes en la instancia
+        private readonly Dictionary<int, Usuario> usuarios = new();
+        private readonly Dictionary<int, Rol> roles = new();
+        private readonly Dictionary<int, Proyecto> proyectos = new();
+        private readonly List<EntradaLog> logs = new();
 
+        public Dictionary<int, Usuario> Usuarios => usuarios;
         public Dictionary<int, Rol> Roles => throw new NotImplementedException();
-
         public Dictionary<int, Proyecto> Proyectos => throw new NotImplementedException();
-
-        public List<EntradaLog> Logs => new List<EntradaLog>();
+        public List<EntradaLog> Logs => logs;
         int siguienteUsuario = 1;
         int siguienteRol = 1;
         int siguienteProyecto = 1;
         int siguienteEntradaLog = 1;
+
+        public Datos()
+        {
+            Reiniciar();
+        }
+
         #region LOGS
         public void AgregarLog(EntradaLog log)
         {
@@ -151,6 +160,20 @@ namespace Backend
             Usuario u2 = new Usuario("María", "Gómez", "b@b.com", "password2");
             GuardarUsuario(u1);
             GuardarUsuario(u2);
+
+            /*
+            // Agregar un par de roles de prueba que estaran disponibles al iniciar la aplicacion
+            Rol r1 = new Rol("Administrador", "Rol con todos los permisos");
+            Rol r2 = new Rol("Usuario", "Rol con permisos limitados");
+            GuardarRol(r1);
+            GuardarRol(r2);
+
+            // Agregar un par de proyectos de prueba que estaran disponibles al iniciar la aplicacion
+            Proyecto p1 = new Proyecto("Proyecto 1","PJ","Descripción del proyecto 1",false,false);
+            Proyecto p2 = new Proyecto("Proyecto 2","HM","Descripción del proyecto 2",false,false);
+            GuardarProyecto(p1);
+            GuardarProyecto(p2);
+            */
         }
     }
 }
