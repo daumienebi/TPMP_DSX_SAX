@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Modelos\" />
     <Folder Include="Seguridad\Validacion\" />
     <Folder Include="Seguridad\Utilidades\" />
     <Folder Include="Seguridad\Servicios\" />

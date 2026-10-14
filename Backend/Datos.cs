@@ -5,13 +5,13 @@ namespace Backend
 {
     public class Datos : IDatos
     {
-        public Dictionary<int, Usuario> Usuarios => throw new NotImplementedException();
+        public Dictionary<int, Usuario> Usuarios => new Dictionary<int, Usuario>();
 
         public Dictionary<int, Rol> Roles => throw new NotImplementedException();
 
         public Dictionary<int, Proyecto> Proyectos => throw new NotImplementedException();
 
-        public List<EntradaLog> Logs => throw new NotImplementedException();
+        public List<EntradaLog> Logs => new List<EntradaLog>();
         int siguienteUsuario = 1;
         int siguienteRol = 1;
         int siguienteProyecto = 1;
@@ -19,12 +19,23 @@ namespace Backend
         #region LOGS
         public void AgregarLog(EntradaLog log)
         {
-            throw new NotImplementedException();
+            if (log == null) throw new ArgumentNullException();
+            // Caso en el que es un log nuevo
+            if(log.Id < 0)
+            {
+                log.Id = siguienteEntradaLog++;
+            }
+            Logs.Add(log);
+            // Entendemos que no se debe poder manipular un log existente,
+            // por lo que no se contempla la actualizacion de un log ya existente
         }
-        
+
         public int LimpiarLog()
         {
-            throw new NotImplementedException();
+            // Limpiamos todos los logs y devolvemos el número de logs eliminados
+            int cantidadEliminada = Logs.Count;
+            Logs.Clear();
+            return cantidadEliminada;
         }
         #endregion
 
@@ -49,36 +60,70 @@ namespace Backend
         #region USUARIOS
         public Usuario? LeerUsuario(int idUsuario)
         {
-            throw new NotImplementedException();
+            // Leemos el usuario por id, si no existe devolvemos null
+            if (Usuarios.ContainsKey(idUsuario))
+            {
+                return Usuarios[idUsuario];
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public Usuario? LeerUsuario(string eMail)
         {
-            throw new NotImplementedException();
+            // Leemos el usuario por email, si no existe devolvemos null
+            foreach (var usuario in Usuarios.Values)
+            {
+                if (usuario.Email == eMail)
+                {
+                    return usuario;
+                }
+            }
+            return null;
         }
 
         public Usuario? EliminarUsuario(int idUsuario)
         {
-            throw new NotImplementedException();
+            // Eliminamos el usuario y devolvemos el usuario eliminado, si no existe devolvemos null
+            if (Usuarios.ContainsKey(idUsuario))
+            {
+                Usuario usuarioEliminado = Usuarios[idUsuario];
+                Usuarios.Remove(idUsuario);
+                // Creamos una entrada de log para la eliminacion del usuario
+                String descripcionLog = $"Se ha eliminado el usuario con ID {usuarioEliminado.Id} y email {usuarioEliminado.Email}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
+                Logs.Add(log);
+                return usuarioEliminado;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public Usuario? GuardarUsuario(Usuario usuario)
         {
             if(usuario == null) throw new ArgumentNullException();
-
             // caso de un nuevo usuario
             if(usuario.Id < 0)
             {
                 usuario.Id = siguienteUsuario++;
                 Usuarios.Add(usuario.Id,usuario);
-                //agregar log
+                // Creamos una entrada de log para el usuario nuevo
+                String descripcionLog = $"Se ha creado un nuevo usuario con ID {usuario.Id} y email {usuario.Email}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
+                Logs.Add(log);
             }
             else
             {
                 // Es un usuario existente, entonces es una actualizacion
                 Usuarios[usuario.Id] = usuario;
                 // agregar log para la actualizacion
-
+                String descripcionLog = $"Se ha actualizado el usuario con ID {usuario.Id} y email {usuario.Email}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.INFO, descripcionLog);
+                Logs.Add(log);
             }
             return usuario;
         }

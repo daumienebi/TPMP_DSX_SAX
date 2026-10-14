@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 using Nucleo.Seguridad;
 
@@ -16,6 +17,12 @@ namespace Nucleo.Modelos
         private DateTime fechaCaducidad;
         private ResultadoHash password;
         private int pin;
+
+        // Constantes para el cálculo del PIN (definidas en la clase)
+        private const int FactorPrimerDigito = 4; // Factor para el primer dígito del PIN
+        private const int FactorSegundoDigito = 120; // Factor para el segundo dígito del PIN
+        private const int minValuePin = 1000; // valor mínimo del PIN (4 dígitos)
+        private const int maxValuePin = 10_000; // valor máximo del PIN (4 dígitos)
 
         public Usuario(string nombre, string apellidos, string email, Rol rol, bool activo, DateTime fechaCaducidad)
         {
@@ -49,24 +56,37 @@ namespace Nucleo.Modelos
 
         public override string ToString()
         {
-            return $"Usuario: {id} - {nombre} {apellidos} ({email})";
+            // No incluimos información sensible como el password o pin etc..
+            string rolTexto = rol?.ToString() ?? "Sin rol";
+            string nombreCompleto = $"{nombre ?? string.Empty} {apellidos ?? string.Empty}".Trim();
+            string activoTexto = activo ? "Activo" : "Inactivo";
+            string fechaTexto = fechaCaducidad == default ? "Sin fecha" : fechaCaducidad.ToString("yyyy-MM-dd");
+
+            return $"Usuario: {id} - {nombreCompleto} ({email ?? "sin-email"}) | {rolTexto} | {activoTexto} | Caduca: {fechaTexto}";
         }
 
         /* comprueba si la contraseña es correcta */
         public bool comprobarContrasena(String password) {
-            // primero volver a generar el hash de la contraseña introducida utilizando
+            // Primero volver a generar el hash de la contraseña introducida utilizando
             // la sal almacenada y luego comparar el hash generado con el almacenado 
             // para ver si son iguales. Si son iguales, la contraseña es correcta, de lo contrario no lo es.
-            return false;
+            return ServicioHash.Verificar(password, this.password);
         }
 
         /*
             Metodo que sirve para cambiar la contraseña del usuario
         */
         public bool cambiarContrasena(String passwordAnterior, String passwordNuevo) {
-            // primero comprobar si la contraseña anterior y luego
+            // Primero comprobar si la contraseña anterior y luego
+            if (!comprobarContrasena(passwordAnterior)) {
+                throw new Exception("La contraseña anterior no es correcta");
+            }
+            if (!ServicioContrasenas.EsValida(passwordNuevo)) {
+                throw new Exception("La nueva contraseña no es válida");
+            }
             // generar el hash de la nueva contraseña y almacenarlo
-            return false;
+            this.password = ServicioHash.Generar(passwordNuevo);
+            return true;
         }
 
         /*
@@ -74,11 +94,10 @@ namespace Nucleo.Modelos
          */
         public int generarPin()
         {
-            // Podemos generar un numero aleatorio
-            Random random = new Random(DateTime.Now.Millisecond);//the seed so that it doesnt generate the same set of numbers
-
-
-            return -1;
+            // RandomNumberGenerator.GetInt32(min, max) devuelve valores >= min y < max
+            int nuevoPin = RandomNumberGenerator.GetInt32(minValuePin, maxValuePin);
+            this.pin = nuevoPin;
+            return this.pin;
         }
 
         /*
@@ -86,7 +105,7 @@ namespace Nucleo.Modelos
          */
         public bool comprobarPin(int pin)
         {
-            return false;
+            return this.pin == pin;
         }
 
         /*
@@ -95,15 +114,25 @@ namespace Nucleo.Modelos
           introducir el resultado de multiplicar el primer digito del PIN por 4 y
           el segundo por 120 y restar el último digito al resultado de esa operación.
          */
-        public int obtenerResultadoCalculoPin() {
-            // Maybe pass the pin to a a string then split it to get all individual values
-            // before carrying on the numeric operation
-            //String cadenaPin = this.pin.ToString();
-            string [] digitosPin = this.pin.ToString().Split("");
-            for (int i = 0; i < digitosPin.Length; i++) { 
-                Console.WriteLine(digitosPin[i]);
+        public int obtenerResultadoCalculoPin()
+        {
+            // El PIN en nuestra aplicación siempre se genera entre 1000 y 9999.
+            if (this.pin < minValuePin || this.pin > maxValuePin)
+            {
+                throw new InvalidOperationException("PIN inválido: debe estar entre 1000 y 9999.");
             }
-            return -1;
+            // Convertir a string (no hay ceros a la izquierda) y validar formato
+            string s = this.pin.ToString();
+            if (s.Length != 4 || !char.IsDigit(s[0]) || !char.IsDigit(s[1]) || !char.IsDigit(s[3]))
+            {
+                throw new InvalidOperationException("Formato de PIN inválido.");
+            }
+            // Obtener dígitos como strings y parsear a enteros
+            int primero = int.Parse(s.Substring(0, 1));
+            int segundo = int.Parse(s.Substring(1, 1));
+            int ultimo = int.Parse(s.Substring(3, 1));
+            // Realizar el cálculo: primer dígito * 4 + segundo dígito * 120 - último dígito
+            return (primero * FactorPrimerDigito) + (segundo * FactorSegundoDigito) - ultimo;
         }
     }
 }
