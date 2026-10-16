@@ -35,12 +35,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cSW5kZXgyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ddsak/Desktop/UNI/Validacion y Pruebas/TPMP_DSX_SAX/www/Pages/Log/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ddsak/Desktop/UNI/Validacion y Pruebas/TPMP_DSX_SAX/www/Pages/Principal/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpbmNpcGFsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ddsak/Desktop/UNI/Validacion y Pruebas/TPMP_DSX_SAX/www/Pages/Proyectos/Seleccionar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJveWVjdG9zXFNlbGVjY2lvbmFyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ddsak/Desktop/UNI/Validacion y Pruebas/TPMP_DSX_SAX/www/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ddsak/Desktop/UNI/Validacion y Pruebas/TPMP_DSX_SAX/www/Pages/Usuarios/Perfil/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcUGVyZmlsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ddsak/Desktop/UNI/Validacion y Pruebas/TPMP_DSX_SAX/www/Pages/_ViewImports.cshtml]

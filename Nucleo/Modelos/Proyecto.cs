@@ -10,25 +10,31 @@ namespace Nucleo.Modelos
         private string nombre;
         private string prefijo;
         private string descripcion;
+        
+        private DateTime fechaCreacion;
 
         private bool esActivo;
 
         private bool esPublico;
 
-        public Proyecto(string nombre, string prefijo, string descripcion, bool esActivo, bool esPublico)
+        public Proyecto(string nombre, string prefijo, string descripcion, DateTime fechaCreacion, bool esActivo, bool esPublico)
         {
             this.nombre = nombre;
             this.prefijo = prefijo;
             this.descripcion = descripcion;
+            this.fechaCreacion = fechaCreacion;
             this.esActivo = esActivo;
             this.esPublico = esPublico;
         }
 
+        public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Prefijo { get => prefijo; set => prefijo = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public bool EsActivo { get => esActivo; set => esActivo = value; }
-        public bool EsPublico { get => esPublico; set => esPublico = value; }
+        public bool EsPublico { get => esPublico; set => esPublico = value; }   
+
+        public DateTime FechaCreacion { get => fechaCreacion; set => fechaCreacion = value; }   
 
         public override bool Equals(object? obj)
         {

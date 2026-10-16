@@ -1,13 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace www.Pages
+namespace www.Pages;
+
+public class IndexModel : PageModel
 {
-    public class IndexModel : PageModel
+    public IActionResult OnGet()
     {
-        public IActionResult OnGet()
-        {
-            return RedirectToPage("/Login/Index");
-        }
+        return RedirectToPage("/Login/Index");
     }
 }

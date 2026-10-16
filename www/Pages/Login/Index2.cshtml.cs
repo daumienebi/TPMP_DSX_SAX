@@ -1,4 +1,4 @@
-using Backend;
+using BackEnd;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Nucleo.Modelos;
@@ -13,7 +13,6 @@ public class Index2Model : PageModel
 
     public Index2Model(IDatos datos)
     {
-        datos = new Datos();
         _datos = datos;
     }
 
@@ -66,7 +65,7 @@ public class Index2Model : PageModel
             return Page();
         }
 
-        bool contraseñaCorrecta = usuario.comprobarContrasena(Contraseña);
+        bool contraseñaCorrecta = usuario.CompruebaPassword(Contraseña);
 
         if (!contraseñaCorrecta)
         {
@@ -83,7 +82,7 @@ public class Index2Model : PageModel
 
         HttpContext.Session.SetInt32(
             ClavesSesion.UsuarioId,
-            usuario.Id);
+            usuario.IdUsuario);
 
         return RedirectToPage("/Principal/Index");
     }

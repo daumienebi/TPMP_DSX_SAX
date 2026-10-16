@@ -1,5 +1,6 @@
 ﻿using Backend;
 using Nucleo.Modelos;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Backend
 {
@@ -52,17 +53,59 @@ namespace Backend
         #region ROLES
         public Rol? LeerRol(int idRol)
         {
-            throw new NotImplementedException();
+            // Leemos el rol por id, si no existe devolvemos null
+            if (Roles.ContainsKey(idRol))
+            {
+                return Roles[idRol];
+            }
+            else
+            {
+                return null;
+            }   
         }
 
         public Rol? GuardarRol(Rol rol)
         {
-            throw new NotImplementedException();
+            // Guardamos el rol, si es nuevo le asignamos un id y lo agregamos a la coleccion, si ya existe lo actualizamos
+            if (rol == null) throw new ArgumentNullException();
+            if (rol.Id < 0)
+            {
+                rol.Id = siguienteRol++;
+                Roles.Add(rol.Id, rol);
+                // Creamos una entrada de log para el rol nuevo
+                String descripcionLog = $"Se ha creado un nuevo rol con ID {rol.Id} y nombre {rol.Nombre}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
+                Logs.Add(log);
+            }
+            else
+            {
+                // Es un rol existente, entonces es una actualizacion
+                Roles[rol.Id] = rol;
+                // agregar log para la actualizacion
+                String descripcionLog = $"Se ha actualizado el rol con ID {rol.Id} y nombre {rol.Nombre}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.INFO, descripcionLog);
+                Logs.Add(log);
+            }
+            return rol;
         }
 
         public Rol? EliminarRol(int idRol)
         {
-            throw new NotImplementedException();
+            // Eliminamos el rol y devolvemos el rol eliminado, si no existe devolvemos null
+            if (Roles.ContainsKey(idRol))
+            {
+                Rol rolEliminado = Roles[idRol];
+                Roles.Remove(idRol);
+                // Creamos una entrada de log para la eliminacion del rol
+                String descripcionLog = $"Se ha eliminado el rol con ID {rolEliminado.Id} y nombre {rolEliminado.Nombre}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
+                Logs.Add(log);
+                return rolEliminado;
+            }
+            else
+            {
+                return null;
+            }
         }
         #endregion
 
@@ -141,39 +184,93 @@ namespace Backend
         #region PROYECTOS
         public Proyecto? GuardarProyecto(Proyecto proyecto)
         {
-            throw new NotImplementedException();
+            // Guardamos el proyecto, si es nuevo le asignamos un id y lo agregamos a la coleccion, si ya existe lo actualizamos
+            if (proyecto == null) throw new ArgumentNullException();
+            if (proyecto.Id < 0)
+            {
+                proyecto.Id = siguienteProyecto++;
+                Proyectos.Add(proyecto.Id, proyecto);
+                // Creamos una entrada de log para el proyecto nuevo
+                String descripcionLog = $"Se ha creado un nuevo proyecto con ID {proyecto.Id} y nombre {proyecto.Nombre}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
+                Logs.Add(log);
+            }
+            else
+            {
+                // Es un proyecto existente, entonces es una actualizacion
+                Proyectos[proyecto.Id] = proyecto;
+                // agregar log para la actualizacion
+                String descripcionLog = $"Se ha actualizado el proyecto con ID {proyecto.Id} y nombre {proyecto.Nombre}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.INFO, descripcionLog);
+                Logs.Add(log);
+            }
+            return proyecto;
         }
         public Proyecto? EliminarProyecto(int idProyecto)
         {
-            throw new NotImplementedException();
+            // Eliminamos el proyecto y devolvemos el proyecto eliminado, si no existe devolvemos null
+            if (Proyectos.ContainsKey(idProyecto))
+            {
+                Proyecto proyectoEliminado = Proyectos[idProyecto];
+                Proyectos.Remove(idProyecto);
+                // Creamos una entrada de log para la eliminacion del proyecto
+                String descripcionLog = $"Se ha eliminado el proyecto con ID {proyectoEliminado.Id} y nombre {proyectoEliminado.Nombre}.";
+                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
+                Logs.Add(log);
+                return proyectoEliminado;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public Proyecto? LeerProyecto(int idProyecto)
         {
-            throw new NotImplementedException();
+            if (Proyectos.ContainsKey(idProyecto))
+            {
+                return Proyectos[idProyecto];
+            }
+            else
+            {
+                return null;
+            }
         }
         #endregion
-        public void Reiniciar()
+
+        public void crearUsuariosDePrueba()
         {
             // Agregar un par de usuarios de prueba que estaran disponibles al iniciar la aplicacion
             Usuario u1 = new Usuario("Juan", "Pérez", "a@a.com", "password1");
             Usuario u2 = new Usuario("María", "Gómez", "b@b.com", "password2");
             GuardarUsuario(u1);
             GuardarUsuario(u2);
+        }
 
-            /*
+        public void crearRolesDePrueba()
+        {
             // Agregar un par de roles de prueba que estaran disponibles al iniciar la aplicacion
             Rol r1 = new Rol("Administrador", "Rol con todos los permisos");
             Rol r2 = new Rol("Usuario", "Rol con permisos limitados");
             GuardarRol(r1);
             GuardarRol(r2);
+        }
 
+        public void crearProyectosDePrueba()
+        {
             // Agregar un par de proyectos de prueba que estaran disponibles al iniciar la aplicacion
-            Proyecto p1 = new Proyecto("Proyecto 1","PJ","Descripción del proyecto 1",false,false);
-            Proyecto p2 = new Proyecto("Proyecto 2","HM","Descripción del proyecto 2",false,false);
+            Proyecto p1 = new Proyecto("Proyecto 1", "PJ", "Descripción del proyecto 1",DateTime.Now, false, false);
+            Proyecto p2 = new Proyecto("Proyecto 2", "HM", "Descripción del proyecto 2", DateTime.Now, false, false);
             GuardarProyecto(p1);
             GuardarProyecto(p2);
-            */
+        }
+
+        public void Reiniciar()
+        {
+            crearProyectosDePrueba();
+            crearRolesDePrueba();
+            crearUsuariosDePrueba();
+
         }
     }
 }

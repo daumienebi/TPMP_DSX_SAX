@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NucleoTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d3609be3877cc636b21b3f0eb41e9e742b0709e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+579fa005dd9203df6a1a137cc41b7a5acda45648")]
 [assembly: System.Reflection.AssemblyProductAttribute("NucleoTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NucleoTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
