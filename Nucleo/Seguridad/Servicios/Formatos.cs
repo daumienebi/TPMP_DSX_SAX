@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Nucleo.Seguridad.Servicios
 {
-    public class Formato
+    public class Formatos
     {
         public static String FormatearFecha(DateTime fecha)
         {

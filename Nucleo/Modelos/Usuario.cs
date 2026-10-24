@@ -14,6 +14,7 @@ namespace Nucleo.Modelos
         private String email;
         private Rol rol;
         private bool activo;
+        private bool TieneCredencialesConfiguradas;
         private DateTime fechaCaducidad;
         private ResultadoHash password;
         private int pin;
@@ -33,7 +34,14 @@ namespace Nucleo.Modelos
             this.activo = activo;
             this.fechaCaducidad = fechaCaducidad;
             this.password = ServicioHash.Generar(password); // Generar el hash de la contraseña al crear el usuario
-
+            if (this.password != null)
+            {
+                this.TieneCredencialesConfiguradas = true;
+            }
+            else
+            {
+                this.TieneCredencialesConfiguradas = false;
+            }
         }
 
         public Usuario(String nombre, string apellidos, String email, string password) {
@@ -41,7 +49,15 @@ namespace Nucleo.Modelos
             this.apellidos = apellidos;
             this.email = email;
             // Generar el hash de la contraseña al crear el usuario 
-            this.password = ServicioHash.Generar(password); 
+            this.password = ServicioHash.Generar(password);
+            if(this.password != null)
+            {
+                this.TieneCredencialesConfiguradas = true;
+            }
+            else
+            {
+                this.TieneCredencialesConfiguradas = false;
+            }
         }
 
         public int Id { get => id; set => id = value; }
@@ -49,6 +65,7 @@ namespace Nucleo.Modelos
         public string Apellidos { get => apellidos; set => apellidos = value; }
         public string Email { get => email; set => email = value; }
         public bool Activo { get => activo; set => activo = value; }
+        public bool TieneCredencialesConfiguradas { get => TieneCredencialesConfiguradas; set => TieneCredencialesConfiguradas = value; }
         public DateTime FechaCaducidad { get => fechaCaducidad; set => fechaCaducidad = value; }
         public Rol Rol { get => rol; set => rol = value; }
 
@@ -75,7 +92,7 @@ namespace Nucleo.Modelos
         }
 
         /* comprueba si la contraseña es correcta */
-        public bool comprobarContrasena(String password) {
+        public bool CompruebaPassword(String password) {
             // Primero volver a generar el hash de la contraseña introducida utilizando
             // la sal almacenada y luego comparar el hash generado con el almacenado 
             // para ver si son iguales. Si son iguales, la contraseña es correcta, de lo contrario no lo es.
@@ -85,9 +102,9 @@ namespace Nucleo.Modelos
         /*
             Metodo que sirve para cambiar la contraseña del usuario
         */
-        public bool cambiarContrasena(String passwordAnterior, String passwordNuevo) {
+        public bool CambiaPassword(String passwordAnterior, String passwordNuevo) {
             // Primero comprobar si la contraseña anterior y luego
-            if (!comprobarContrasena(passwordAnterior)) {
+            if (!CompruebaPassword(passwordAnterior)) {
                 throw new Exception("La contraseña anterior no es correcta");
             }
             if (!ServicioContrasenas.EsValida(passwordNuevo)) {
@@ -97,6 +114,8 @@ namespace Nucleo.Modelos
             this.password = ServicioHash.Generar(passwordNuevo);
             return true;
         }
+
+        public 
 
         /*
             Generar el pin del usuario cuando entra por primera vez

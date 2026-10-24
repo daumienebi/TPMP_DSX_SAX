@@ -1,4 +1,4 @@
-using BackEnd;
+using Backend;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Nucleo.Modelos;
@@ -49,16 +49,10 @@ public class IndexModel : PageModel
             return RedirectToPage("/Login/Index");
         }
 
-        NombreUsuario = usuario.EMail;
+        NombreUsuario = usuario.Email;
 
         var eventos = _datos.Logs
-            .Select(log =>
-                new EntradaLog(
-                    log.FechaHora,
-                    log.Nivel,
-                    log.Mensaje,
-                    log.NombreUsuario))
-            .ToList();
+            .Select(log => new EntradaLog(log.Usuario,log.FechaHora,log.TipoEntradaLog,log.Descripcion).ToList());
         Niveles = eventos
             .Select(evento => evento.Nivel)
             .Where(nivel =>

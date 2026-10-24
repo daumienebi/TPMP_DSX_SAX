@@ -209,19 +209,19 @@
 
                                 <td>
                                     <span class="@ObtenerClaseNivel(
-                                                                                evento.Nivel)">
+                                                                                evento.TipoEntradaLog)">
 
-                                        @evento.Nivel
+                                        @evento.TipoEntradaLog
 
                                     </span>
                                 </td>
 
                                 <td class="text-nowrap">
-                                    @evento.NombreUsuario
+                                    @evento.Usuario.Nombre
                                 </td>
 
                                 <td class="mensaje-evento">
-                                    @evento.Mensaje
+                                    @evento.Descripcion
                                 </td>
 
                             </tr>

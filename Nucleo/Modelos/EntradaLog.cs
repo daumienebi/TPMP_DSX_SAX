@@ -22,6 +22,13 @@ namespace Nucleo.Modelos
         }
 
         /*Otro constructor para utiliza cuando no se tiene un usuario específico */
+        public EntradaLog(DateTime fechaHora, String tipoEntradaLog, string descripcion, string v)
+        {
+            this.fechaHora = fechaHora;
+            this.tipoEntradaLog = tipoEntradaLog;
+            this.descripcion = descripcion;
+        }
+
         public EntradaLog(DateTime fechaHora, String tipoEntradaLog, string descripcion)
         {
             this.fechaHora = fechaHora;

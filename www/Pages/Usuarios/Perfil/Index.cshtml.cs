@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
-using BackEnd;
+using Backend;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Nucleo.Modelos;
-using Nucleo.Servicios;
+using Nucleo.Seguridad.Servicios;
 using www.Utilidades;
 using UsuarioModelo = Nucleo.Modelos.Usuario;
 
@@ -139,7 +139,7 @@ public class IndexModel : PageModel
             _datos.LeerUsuario(emailNormalizado);
 
         if (usuarioConMismoEmail is not null &&
-            usuarioConMismoEmail.IdUsuario != usuario.IdUsuario)
+            usuarioConMismoEmail.Id != usuario.Id)
         {
             ModelState.AddModelError(
                 nameof(EMail),
@@ -148,7 +148,7 @@ public class IndexModel : PageModel
             return Page();
         }
 
-        usuario.EMail = emailNormalizado;
+        usuario.Email = emailNormalizado;
         usuario.Nombre = Nombre.Trim();
         usuario.Apellidos = Apellidos.Trim();
 
@@ -189,9 +189,7 @@ public class IndexModel : PageModel
             return Page();
         }
 
-        bool cambioCorrecto = usuario.CambiaPassword(
-            PasswordActual,
-            PasswordNueva);
+        bool cambioCorrecto = usuario.CambiaPassword(PasswordActual,PasswordNueva);
 
         if (!cambioCorrecto)
         {
@@ -225,29 +223,29 @@ public class IndexModel : PageModel
 
     private void CargarDatosEditables(Usuario usuario)
     {
-        EMail = usuario.EMail;
+        EMail = usuario.Email;
         Nombre = usuario.Nombre;
         Apellidos = usuario.Apellidos;
     }
 
     private void CargarDatosCuenta(Usuario usuario)
     {
-        IdUsuario = usuario.IdUsuario;
+        IdUsuario = usuario.Id;
         SinPassword = usuario.TieneCredencialesConfiguradas;
-        CuentaActiva = usuario.Activa;
+        CuentaActiva = usuario.Activo;
         Rol = 0;
-        IntentosErroneos = usuario.IntentosErroneos;
-        NumeroPasswordsAnteriores = usuario.ListaPasswordsCount;
+        //IntentosErroneos = usuario.IntentosErroneos;
+        //NumeroPasswordsAnteriores = usuario.ListaPasswordsCount;
 
-        FechaUltimoAccesoTexto = Formatos.FormatearFecha(usuario.FechaUltimoAcceso);
+        //FechaUltimoAccesoTexto = Formatos.FormatearFecha(usuario.FechaUltimoAcceso);
 
-        FechaAccesoActualTexto = Formatos.FormatearFecha(usuario.FechaUltimoAcceso);
+        //FechaAccesoActualTexto = Formatos.FormatearFecha(usuario.FechaUltimoAcceso);
 
-        UltimoCambioPasswordTexto = Formatos.FormatearFecha(usuario.UltimoCambioPassword);
+        //UltimoCambioPasswordTexto = Formatos.FormatearFecha(usuario.UltimoCambioPassword);
 
-        BloquearAccesoHastaTexto = Formatos.FormatearFecha(usuario.BloquearAccesoHasta);
+        //BloquearAccesoHastaTexto = Formatos.FormatearFecha(usuario.BloquearAccesoHasta);
 
-        CaducidadCuentaTexto = Formatos.FormatearFecha(usuario.CaducidadCuenta);
+        CaducidadCuentaTexto = Formatos.FormatearFecha(usuario.FechaCaducidad);
     }
 
     private void CargarCabecera(Usuario usuario)
@@ -268,7 +266,7 @@ public class IndexModel : PageModel
 
         Proyecto? proyecto = _datos.LeerProyecto(id);
 
-        if (proyecto is null || !proyecto.Activo)
+        if (proyecto is null || !proyecto.EsActivo)
         {
             HttpContext.Session.Remove(
                 ClavesSesion.ProyectoActualId);
