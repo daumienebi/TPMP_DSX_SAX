@@ -216,8 +216,17 @@
                                     </span>
                                 </td>
 
-                                <td class="text-nowrap">
-                                    @evento.Usuario.Nombre
+                                <td class="text-nowrap">                                    
+                                    @if (evento.Usuario is not null)
+                                    {
+                                        @evento.Usuario.Nombre
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">
+                                            (Usuario desconocido)
+                                        </span>
+                                    }
                                 </td>
 
                                 <td class="mensaje-evento">

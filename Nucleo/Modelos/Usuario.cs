@@ -14,7 +14,7 @@ namespace Nucleo.Modelos
         private String email;
         private Rol rol;
         private bool activo;
-        private bool TieneCredencialesConfiguradas;
+        private bool tieneCredencialesConfiguradas;
         private DateTime fechaCaducidad;
         private ResultadoHash password;
         private int pin;
@@ -34,23 +34,7 @@ namespace Nucleo.Modelos
             this.activo = activo;
             this.fechaCaducidad = fechaCaducidad;
             this.password = ServicioHash.Generar(password); // Generar el hash de la contraseña al crear el usuario
-            if (this.password != null)
-            {
-                this.TieneCredencialesConfiguradas = true;
-            }
-            else
-            {
-                this.TieneCredencialesConfiguradas = false;
-            }
-        }
-
-        public Usuario(String nombre, string apellidos, String email, string password) {
-            this.nombre = nombre;
-            this.apellidos = apellidos;
-            this.email = email;
-            // Generar el hash de la contraseña al crear el usuario 
-            this.password = ServicioHash.Generar(password);
-            if(this.password != null)
+            if(this.password.Hash != null)
             {
                 this.TieneCredencialesConfiguradas = true;
             }
@@ -65,7 +49,7 @@ namespace Nucleo.Modelos
         public string Apellidos { get => apellidos; set => apellidos = value; }
         public string Email { get => email; set => email = value; }
         public bool Activo { get => activo; set => activo = value; }
-        public bool TieneCredencialesConfiguradas { get => TieneCredencialesConfiguradas; set => TieneCredencialesConfiguradas = value; }
+        public bool TieneCredencialesConfiguradas { get => tieneCredencialesConfiguradas; set => tieneCredencialesConfiguradas = value; }
         public DateTime FechaCaducidad { get => fechaCaducidad; set => fechaCaducidad = value; }
         public Rol Rol { get => rol; set => rol = value; }
 
@@ -114,8 +98,6 @@ namespace Nucleo.Modelos
             this.password = ServicioHash.Generar(passwordNuevo);
             return true;
         }
-
-        public 
 
         /*
             Generar el pin del usuario cuando entra por primera vez

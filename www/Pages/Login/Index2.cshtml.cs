@@ -77,12 +77,12 @@ public class Index2Model : PageModel
         }
 
         // Usuario correctamente autenticado.
-        HttpContext.Session.Remove(
-            ClavesSesion.EmailPendiente);
+        HttpContext.Session.Remove(ClavesSesion.EmailPendiente);
 
-        HttpContext.Session.SetInt32(
-            ClavesSesion.UsuarioId,
-            usuario.Id);
+        HttpContext.Session.SetInt32(ClavesSesion.UsuarioId,usuario.Id);
+        // Agregamos una entrada de log para indicar que el usuario ha iniciado sesión correctamente.
+        _datos.AgregarLog(
+            new EntradaLog(usuario, DateTime.Now, TipoEntradaLog.INFO, $"El usuario {usuario.Email} ha iniciado sesión correctamente."));
 
         return RedirectToPage("/Principal/Index");
     }

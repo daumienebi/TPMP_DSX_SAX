@@ -231,9 +231,9 @@ public class IndexModel : PageModel
     private void CargarDatosCuenta(Usuario usuario)
     {
         IdUsuario = usuario.Id;
-        SinPassword = usuario.TieneCredencialesConfiguradas;
+        SinPassword = !usuario.TieneCredencialesConfiguradas;
         CuentaActiva = usuario.Activo;
-        Rol = 0;
+        Rol = usuario.Rol.Id;
         //IntentosErroneos = usuario.IntentosErroneos;
         //NumeroPasswordsAnteriores = usuario.ListaPasswordsCount;
 

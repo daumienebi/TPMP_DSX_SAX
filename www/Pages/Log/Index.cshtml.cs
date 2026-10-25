@@ -52,9 +52,9 @@ public class IndexModel : PageModel
         NombreUsuario = usuario.Email;
 
         var eventos = _datos.Logs
-            .Select(log => new EntradaLog(log.Usuario,log.FechaHora,log.TipoEntradaLog,log.Descripcion).ToList());
+            .Select(log => new EntradaLog(log.Usuario,log.FechaHora,log.TipoEntradaLog,log.Descripcion)).ToList();
         Niveles = eventos
-            .Select(evento => evento.Nivel)
+            .Select(evento => evento.TipoEntradaLog)
             .Where(nivel =>
                 !string.IsNullOrWhiteSpace(nivel))
             .Distinct()
@@ -66,13 +66,13 @@ public class IndexModel : PageModel
         {
             eventos = eventos
                 .Where(evento =>
-                    evento.Mensaje.Contains(
-                        TextoBusqueda,
-                        StringComparison.OrdinalIgnoreCase)
-                    ||
-                    evento.NombreUsuario.Contains(
+                    evento.Descripcion.Contains(
                         TextoBusqueda,
                         StringComparison.OrdinalIgnoreCase))
+                    //||
+                    //evento.Usuario.Nombre.Contains(
+                    //    TextoBusqueda,
+                    //    StringComparison.OrdinalIgnoreCase))
                 .ToList();
         }
 
@@ -82,7 +82,7 @@ public class IndexModel : PageModel
             eventos = eventos
                 .Where(evento =>
                     string.Equals(
-                        evento.Nivel,
+                        evento.TipoEntradaLog,
                         NivelSeleccionado,
                         StringComparison.OrdinalIgnoreCase))
                 .ToList();

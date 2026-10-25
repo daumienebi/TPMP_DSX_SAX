@@ -48,8 +48,9 @@ public class IndexModel : PageModel
         {
             var usuario = _datos.LeerUsuario(idUsuario.Value);
             if (usuario is not null)
-            { // Registrar el evento antes de limpiar la sesión.
-                _datos.AgregarLog(new EntradaLog(DateTime.Now, "Inicio de Sesión", $"Cierre de Sesión {usuario.Email}", usuario.ToString()));
+            { 
+                // Registrar el evento antes de limpiar la sesión.
+                _datos.AgregarLog(new EntradaLog(usuario,DateTime.Now, TipoEntradaLog.INFO, $"Cierre de Sesión {usuario.Email}"));
             }
         }
         EliminarDatosSesion();

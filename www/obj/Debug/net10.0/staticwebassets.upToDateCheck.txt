@@ -41,6 +41,7 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\favicon
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\css\site.css
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\jquery\dist\jquery.slim.min.js
@@ -65,6 +66,7 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\www\wwwroot\lib\boo
 wwwroot\css\login.css
 wwwroot\css\password.css
 wwwroot\css\principal.css
+wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\LICENSE

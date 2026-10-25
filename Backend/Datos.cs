@@ -13,8 +13,8 @@ namespace Backend
         private readonly List<EntradaLog> logs = new();
 
         public Dictionary<int, Usuario> Usuarios => usuarios;
-        public Dictionary<int, Rol> Roles => throw new NotImplementedException();
-        public Dictionary<int, Proyecto> Proyectos => throw new NotImplementedException();
+        public Dictionary<int, Rol> Roles => roles;
+        public Dictionary<int, Proyecto> Proyectos => proyectos;
         public List<EntradaLog> Logs => logs;
         int siguienteUsuario = 1;
         int siguienteRol = 1;
@@ -72,19 +72,11 @@ namespace Backend
             {
                 rol.Id = siguienteRol++;
                 Roles.Add(rol.Id, rol);
-                // Creamos una entrada de log para el rol nuevo
-                String descripcionLog = $"Se ha creado un nuevo rol con ID {rol.Id} y nombre {rol.Nombre}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
-                Logs.Add(log);
             }
             else
             {
                 // Es un rol existente, entonces es una actualizacion
                 Roles[rol.Id] = rol;
-                // agregar log para la actualizacion
-                String descripcionLog = $"Se ha actualizado el rol con ID {rol.Id} y nombre {rol.Nombre}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.INFO, descripcionLog);
-                Logs.Add(log);
             }
             return rol;
         }
@@ -96,10 +88,6 @@ namespace Backend
             {
                 Rol rolEliminado = Roles[idRol];
                 Roles.Remove(idRol);
-                // Creamos una entrada de log para la eliminacion del rol
-                String descripcionLog = $"Se ha eliminado el rol con ID {rolEliminado.Id} y nombre {rolEliminado.Nombre}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
-                Logs.Add(log);
                 return rolEliminado;
             }
             else
@@ -143,10 +131,6 @@ namespace Backend
             {
                 Usuario usuarioEliminado = Usuarios[idUsuario];
                 Usuarios.Remove(idUsuario);
-                // Creamos una entrada de log para la eliminacion del usuario
-                String descripcionLog = $"Se ha eliminado el usuario con ID {usuarioEliminado.Id} y email {usuarioEliminado.Email}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
-                Logs.Add(log);
                 return usuarioEliminado;
             }
             else
@@ -157,25 +141,17 @@ namespace Backend
 
         public Usuario? GuardarUsuario(Usuario usuario)
         {
-            if(usuario == null) throw new ArgumentNullException();
+            if (usuario == null) throw new ArgumentNullException();
             // caso de un nuevo usuario
             if(usuario.Id < 0)
             {
                 usuario.Id = siguienteUsuario++;
                 Usuarios.Add(usuario.Id,usuario);
-                // Creamos una entrada de log para el usuario nuevo
-                String descripcionLog = $"Se ha creado un nuevo usuario con ID {usuario.Id} y email {usuario.Email}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
-                Logs.Add(log);
             }
             else
             {
                 // Es un usuario existente, entonces es una actualizacion
                 Usuarios[usuario.Id] = usuario;
-                // agregar log para la actualizacion
-                String descripcionLog = $"Se ha actualizado el usuario con ID {usuario.Id} y email {usuario.Email}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.INFO, descripcionLog);
-                Logs.Add(log);
             }
             return usuario;
         }
@@ -190,19 +166,11 @@ namespace Backend
             {
                 proyecto.Id = siguienteProyecto++;
                 Proyectos.Add(proyecto.Id, proyecto);
-                // Creamos una entrada de log para el proyecto nuevo
-                String descripcionLog = $"Se ha creado un nuevo proyecto con ID {proyecto.Id} y nombre {proyecto.Nombre}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
-                Logs.Add(log);
             }
             else
             {
                 // Es un proyecto existente, entonces es una actualizacion
                 Proyectos[proyecto.Id] = proyecto;
-                // agregar log para la actualizacion
-                String descripcionLog = $"Se ha actualizado el proyecto con ID {proyecto.Id} y nombre {proyecto.Nombre}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.INFO, descripcionLog);
-                Logs.Add(log);
             }
             return proyecto;
         }
@@ -213,10 +181,6 @@ namespace Backend
             {
                 Proyecto proyectoEliminado = Proyectos[idProyecto];
                 Proyectos.Remove(idProyecto);
-                // Creamos una entrada de log para la eliminacion del proyecto
-                String descripcionLog = $"Se ha eliminado el proyecto con ID {proyectoEliminado.Id} y nombre {proyectoEliminado.Nombre}.";
-                EntradaLog log = new EntradaLog(DateTime.Now, TipoEntradaLog.AVISO, descripcionLog);
-                Logs.Add(log);
                 return proyectoEliminado;
             }
             else
@@ -238,39 +202,77 @@ namespace Backend
         }
         #endregion
 
+        /*
+         * Creamos un par de usuarios de prueba para poder probar la aplicacion
+         * Se crea un usuario administrador y un usuario normal
+         */
         public void crearUsuariosDePrueba()
         {
-            // Agregar un par de usuarios de prueba que estaran disponibles al iniciar la aplicacion
-            Usuario u1 = new Usuario("Juan", "Pérez", "a@a.com", "password1");
-            Usuario u2 = new Usuario("María", "Gómez", "b@b.com", "password2");
+            // Obtenemos el rol de administrador para asignarlo al usuario administrador
+            Rol rolAdmin = LeerRol(1); // El 1 será del admin
+            Rol rolUser = LeerRol(2); // El 2 será del user
+            // Creamos un usuario administrador y un usuario normal para las pruebas
+            Usuario admin = new Usuario("Admin", "User", "admin@admin.com",rolAdmin,true,DateTime.Now.AddDays(365), "admin123");
+            // Agregar un par de usuarios con todos los campos y roles para probar la aplicacion
+            Usuario u1 = new Usuario("Juan", "Pérez", "a@a.com", rolUser, true,DateTime.Now.AddDays(365), "password1");
+            Usuario u2 = new Usuario("María", "Gómez", "b@b.com", rolUser, true,DateTime.Now.AddDays(365), "password2");
+            GuardarUsuario(admin);
             GuardarUsuario(u1);
             GuardarUsuario(u2);
+            // Agregar una entrada de log para indicar que se han creado los usuarios de prueba
+            String descripcionLog = "Se han creado los usuarios de prueba: " + admin.Email + ", " + u1.Email + ", " + u2.Email;
+            AgregarLog(new EntradaLog(admin, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
         }
 
+        /*
+         * Creamos un par de roles de prueba para poder probar la aplicacion
+         * Se crea un rol administrador y un rol usuario normal
+         */
         public void crearRolesDePrueba()
         {
+            // Obtener el primer usuario que es el admin para asociarlo al log
+            // (esto se hace al no tener una base de datos real)
+            Usuario admin = LeerUsuario(1);
             // Agregar un par de roles de prueba que estaran disponibles al iniciar la aplicacion
             Rol r1 = new Rol("Administrador", "Rol con todos los permisos");
             Rol r2 = new Rol("Usuario", "Rol con permisos limitados");
             GuardarRol(r1);
             GuardarRol(r2);
+            // Agregar una entrada de log para indicar que se han creado los roles de prueba
+            String descripcionLog = "Se han creado los roles de prueba: " + r1.Nombre + ", " + r2.Nombre;
+            AgregarLog(new EntradaLog(admin, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
         }
 
+        /*
+         * Creamos un par de proyectos de prueba para poder probar la aplicacion
+         * Se crean proyectos con diferentes configuraciones para probar la aplicacion
+         */
         public void crearProyectosDePrueba()
         {
+            // Obtener el primer usuario que es el admin para asociarlo al log
+            // (esto se hace al no tener una base de datos real)
+            Usuario admin = LeerUsuario(1);
             // Agregar un par de proyectos de prueba que estaran disponibles al iniciar la aplicacion
-            Proyecto p1 = new Proyecto("Proyecto 1", "PJ", "Descripción del proyecto 1",DateTime.Now, false, false);
-            Proyecto p2 = new Proyecto("Proyecto 2", "HM", "Descripción del proyecto 2", DateTime.Now, false, false);
+            Proyecto p1 = new Proyecto("SAX DSX", "SD", "Descripción del proyecto 1",DateTime.Now, false, false);
+            Proyecto p2 = new Proyecto("Clash Eleven", "CE", "Descripción del proyecto 2", DateTime.Now, true, true);
+            Proyecto p3 = new Proyecto("Pico", "PC", "Descripción del proyecto 3", DateTime.Now, true, true);
             GuardarProyecto(p1);
             GuardarProyecto(p2);
+            GuardarProyecto(p3);
+            // Agregar una entrada de log para indicar que se han creado los proyectos de prueba
+            String descripcionLog = "Se han creado los proyectos de prueba: " + p1.Nombre + ", " + p2.Nombre + ", " + p3.Nombre;
+            AgregarLog(new EntradaLog(admin, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
         }
 
+        /*
+         * Reinicia los datos de la aplicacion, eliminando todos los usuarios, roles y proyectos existentes
+         * y creando los de prueba nuevamente
+         */
         public void Reiniciar()
         {
-            crearProyectosDePrueba();
             crearRolesDePrueba();
             crearUsuariosDePrueba();
-
+            crearProyectosDePrueba();
         }
     }
 }

@@ -157,25 +157,19 @@ public class IndexModel : PageModel
             return Page();
         }
 
-        var nuevoProyecto = new Proyecto
-        {
-            Nombre = nombreNormalizado,
-            Prefijo = siglasNormalizadas,
-            Descripcion = Descripcion.Trim(),
-            FechaCreacion = DateTime.Now,
-            // Activo significa que el proyecto está disponible.
-            EsActivo = true,
-            EsPublico = false
-        };
+        var nuevoProyecto = new Proyecto(
+            nombreNormalizado,
+            siglasNormalizadas,
+            Descripcion.Trim(),
+            DateTime.Now,true,false);
 
-        Proyecto proyectoGuardado =
-            _datos.GuardarProyecto(nuevoProyecto);
-
-        // El nuevo proyecto se establece como proyecto actual
-        // de este usuario.
-        HttpContext.Session.SetInt32(
-            ClavesSesion.ProyectoActualId,
-            proyectoGuardado.Id);
+        Proyecto proyectoGuardado =_datos.GuardarProyecto(nuevoProyecto);
+        // Agregamos una entrada de log para indicar que se creó un nuevo proyecto
+        Usuario usuario = _datos.LeerUsuario(HttpContext.Session.GetInt32(ClavesSesion.UsuarioId)!.Value)!;
+        _datos.AgregarLog(
+            new EntradaLog(usuario, DateTime.Now, TipoEntradaLog.INFO, $"El usuario {usuario.Email} ha creado un nuevo proyecto"));
+        // El nuevo proyecto se establece como proyecto actual de este usuario.
+        HttpContext.Session.SetInt32(ClavesSesion.ProyectoActualId,proyectoGuardado.Id);
 
         TempData["MensajeCorrecto"] =
             "El proyecto se ha creado y seleccionado.";
@@ -261,11 +255,20 @@ public class IndexModel : PageModel
             HttpContext.Session.GetInt32(
                 ClavesSesion.ProyectoActualId);
 
+        //List<Proyecto> proyectos =
+        //    _datos
+        //        .ProyectosTodos()
+        //        .OrderBy(proyecto => proyecto.Nombre)
+        //        .ToList();
+
+        /* Cargar los proyectos directamente desde el diccionario de proyectos */
         List<Proyecto> proyectos =
             _datos
-                .ProyectosTodos()
+                .Proyectos
+                .Values
                 .OrderBy(proyecto => proyecto.Nombre)
                 .ToList();
+
 
         ProyectosDisponibles =
             proyectos
