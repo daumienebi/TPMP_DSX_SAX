@@ -1,0 +1,121 @@
+@page
+@model www.Pages.Login.RecuperarModel
+
+@{
+    ViewData["Title"] = "Recuperar contraseña";
+    ViewData["NombreProyecto"] = "-";
+    ViewData["TituloCabecera"] = "Recuperación de contraseña";
+    ViewData["MostrarMenuUsuario"] = false;
+}
+
+<link rel="stylesheet"
+      href="~/css/password.css"
+      asp-append-version="true" />
+
+<div class="pagina-password">
+    <div class="password" style="width: min(100%, 360px);">
+        <h1>Recuperar contraseña</h1>
+
+        <p style="font-size: 0.85rem; text-align: center; color: #555; margin-bottom: 0.8rem;">
+            Usuario: <strong>@Model.EMail</strong>
+        </p>
+
+        @if (!Model.PinValidado)
+        {
+            <div style="background: #e0f2f1; border: 1px solid #b2dfdb; border-radius: 6px; padding: 0.75rem; margin-bottom: 1rem; font-size: 0.82rem; color: #004d40;">
+                <div style="font-weight: 600; margin-bottom: 0.35rem;">
+                    Introduce el resultado del cálculo con tu PIN de seguridad:
+                </div>
+                <div style="margin-bottom: 0.25rem;">
+                    Multiplica el 1.º dígito de tu PIN por 4, el 2.º por 120 y resta el 4.º dígito:
+                </div>
+                <div style="margin-top: 0.35rem; font-family: monospace; font-weight: bold; background: #ffffff; padding: 0.35rem 0.5rem; border-radius: 4px; border: 1px dashed #80cbc4; text-align: center;">
+                    (1.º dígito × 4) + (2.º dígito × 120) - (4.º dígito)
+                </div>
+            </div>
+
+            <form method="post" asp-page-handler="ValidarPin">
+                <div asp-validation-summary="ModelOnly" class="error"></div>
+
+                <label asp-for="ResultadoCalculo">Resultado del cálculo</label>
+
+                <input asp-for="ResultadoCalculo"
+                       id="txtCalculoPin"
+                       type="number"
+                       placeholder="Introduce el cálculo"
+                       required />
+
+                <span asp-validation-for="ResultadoCalculo"
+                      class="error"></span>
+
+                <div class="botones">
+                    <button type="submit"
+                            id="btnAtras"
+                            class="boton-atras"
+                            asp-page-handler="Atras"
+                            formnovalidate>
+                        Atrás
+                    </button>
+
+                    <button type="submit"
+                            id="btnValidarPin"
+                            class="boton-aceptar">
+                        Comprobar
+                    </button>
+                </div>
+            </form>
+        }
+        else
+        {
+            <div style="background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 6px; padding: 0.6rem 0.75rem; margin-bottom: 1rem; font-size: 0.82rem; color: #2e7d32;">
+                ✓ PIN validado correctamente. Introduce tu nueva contraseña:
+            </div>
+
+            <form method="post" asp-page-handler="CambiarPassword">
+                <div asp-validation-summary="ModelOnly" class="error"></div>
+
+                <label asp-for="PasswordNueva">Nueva contraseña</label>
+
+                <input asp-for="PasswordNueva"
+                       id="txtPasswordNueva"
+                       type="password"
+                       placeholder="Mínimo 8 caracteres"
+                       autocomplete="new-password"
+                       required />
+
+                <span asp-validation-for="PasswordNueva"
+                      class="error"></span>
+
+                <label asp-for="ConfirmacionPassword" style="margin-top: 0.6rem;">Repetir nueva contraseña</label>
+
+                <input asp-for="ConfirmacionPassword"
+                       id="txtConfirmacionPassword"
+                       type="password"
+                       placeholder="Repite la nueva contraseña"
+                       autocomplete="new-password"
+                       required />
+
+                <span asp-validation-for="ConfirmacionPassword"
+                      class="error"></span>
+
+                <div class="botones">
+                    <button type="submit"
+                            id="btnAtras"
+                            class="boton-atras"
+                            asp-page-handler="Atras"
+                            formnovalidate>
+                        Cancelar
+                    </button>
+
+                    <button type="submit"
+                            id="btnGuardarPassword"
+                            class="boton-aceptar">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        }
+
+        <p class="pie">Test Project Management Platform</p>
+    </div>
+</div>

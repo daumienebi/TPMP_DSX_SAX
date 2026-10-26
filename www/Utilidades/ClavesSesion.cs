@@ -1,4 +1,4 @@
-﻿namespace www.Utilidades
+namespace www.Utilidades
 {
     public static class ClavesSesion
     {
@@ -12,5 +12,8 @@
 
         public const string ProyectoActualId =
             "ProyectoActual.Id";
+
+        public const string PinValidado =
+            "Login.PinValidado";
     }
 }

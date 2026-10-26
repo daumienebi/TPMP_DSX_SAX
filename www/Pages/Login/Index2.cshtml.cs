@@ -40,6 +40,11 @@ public class Index2Model : PageModel
         return RedirectToPage("/Login/Index");
     }
 
+    public IActionResult OnPostRecuperar()
+    {
+        return RedirectToPage("/Login/Recuperar");
+    }
+
     public IActionResult OnPostAceptar()
     {
         EMail = ObtenerEmailPendiente();

@@ -25,6 +25,8 @@ public class IndexModel : PageModel
 
     public int IdUsuario { get; private set; }
 
+    public int PinUsuario { get; private set; }
+
     public bool SinPassword { get; private set; }
 
     public bool CuentaActiva { get; private set; }
@@ -231,6 +233,7 @@ public class IndexModel : PageModel
     private void CargarDatosCuenta(Usuario usuario)
     {
         IdUsuario = usuario.Id;
+        PinUsuario = usuario.Pin;
         SinPassword = !usuario.TieneCredencialesConfiguradas;
         CuentaActiva = usuario.Activo;
         Rol = usuario.Rol.Id;

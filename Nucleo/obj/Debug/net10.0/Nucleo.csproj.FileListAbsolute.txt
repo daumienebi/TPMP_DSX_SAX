@@ -10,4 +10,3 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\ne
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\refint\Nucleo.dll
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.pdb
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\ref\Nucleo.dll
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\Nucleo\obj\Debug\net10.0\Nucleo.csproj.Up2Date

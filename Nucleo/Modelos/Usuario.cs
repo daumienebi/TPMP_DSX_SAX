@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
@@ -42,6 +42,8 @@ namespace Nucleo.Modelos
             {
                 this.TieneCredencialesConfiguradas = false;
             }
+            // Generamos el pin para el usuario
+            this.pin = generarPin();
         }
 
         public int Id { get => id; set => id = value; }
@@ -52,6 +54,7 @@ namespace Nucleo.Modelos
         public bool TieneCredencialesConfiguradas { get => tieneCredencialesConfiguradas; set => tieneCredencialesConfiguradas = value; }
         public DateTime FechaCaducidad { get => fechaCaducidad; set => fechaCaducidad = value; }
         public Rol Rol { get => rol; set => rol = value; }
+        public int Pin { get => pin; }
 
         public override bool Equals(object? obj)
         {
@@ -62,6 +65,8 @@ namespace Nucleo.Modelos
                    email == usuario.email &&
                    EqualityComparer<Rol>.Default.Equals(rol, usuario.rol) &&
                    activo == usuario.activo &&
+                   pin == usuario.pin &&
+                   tieneCredencialesConfiguradas == usuario.tieneCredencialesConfiguradas &&
                    fechaCaducidad == usuario.fechaCaducidad;
         }
 
@@ -96,6 +101,18 @@ namespace Nucleo.Modelos
             }
             // generar el hash de la nueva contraseña y almacenarlo
             this.password = ServicioHash.Generar(passwordNuevo);
+            return true;
+        }
+
+        /*
+            Metodo que sirve para cambiar o restablecer la contraseña directamente (por ejemplo tras validar el PIN)
+        */
+        public bool CambiaPassword(String passwordNuevo) {
+            if (!ServicioContrasenas.EsValida(passwordNuevo)) {
+                throw new Exception("La nueva contraseña no es válida");
+            }
+            this.password = ServicioHash.Generar(passwordNuevo);
+            this.TieneCredencialesConfiguradas = true;
             return true;
         }
 

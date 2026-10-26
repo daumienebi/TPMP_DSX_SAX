@@ -133,6 +133,27 @@
                             }
                         </dd>
 
+                        <dt class="col-sm-5">PIN de seguridad</dt>
+                        <dd class="col-sm-7">
+                            <div class="d-flex align-items-center gap-2">
+                                <input type="password" 
+                                       id="txtPinSeguridad" 
+                                       value="@Model.PinUsuario" 
+                                       readonly 
+                                       class="form-control form-control-sm d-inline-block" 
+                                       style="width: 100px; text-align: center; font-weight: bold; letter-spacing: 2px;" />
+                                <button type="button" 
+                                        class="btn btn-sm btn-outline-secondary" 
+                                        onclick="togglePinVisibilidad()" 
+                                        id="btnTogglePin">
+                                    Ver PIN
+                                </button>
+                            </div>
+                            <small class="text-muted d-block mt-1">
+                                <span class="text-danger fw-bold">* Importante:</span> Recuerda este PIN. Lo necesitarás para recuperar tu contraseña si la olvidas.
+                            </small>
+                        </dd>
+
                         <dt class="col-sm-5">Rol</dt>
                         <dd class="col-sm-7">@Model.Rol</dd>
 
@@ -219,3 +240,20 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        function togglePinVisibilidad() {
+            var input = document.getElementById("txtPinSeguridad");
+            var btn = document.getElementById("btnTogglePin");
+            if (input.type === "password") {
+                input.type = "text";
+                btn.textContent = "Ocultar PIN";
+            } else {
+                input.type = "password";
+                btn.textContent = "Ver PIN";
+            }
+        }
+    </script>
+}
+

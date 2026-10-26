@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model www.Pages.Login.Index2Model
 
 @{
@@ -43,6 +43,14 @@
                         asp-page-handler="Aceptar">
                     Validar
                 </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 0.9rem;">
+                <a asp-page="/Login/Recuperar"
+                   id="btnRecuperar"
+                   style="font-size: 0.8rem; color: #00838f; text-decoration: none;">
+                    ¿Has olvidado tu contraseña?
+                </a>
             </div>
         </form>
         <p class="pie">Test Project Management Platform</p>

@@ -221,7 +221,7 @@ namespace Backend
             GuardarUsuario(u2);
             // Agregar una entrada de log para indicar que se han creado los usuarios de prueba
             String descripcionLog = "Se han creado los usuarios de prueba: " + admin.Email + ", " + u1.Email + ", " + u2.Email;
-            AgregarLog(new EntradaLog(admin, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
+            AgregarLog(new EntradaLog(null, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
         }
 
         /*
@@ -240,7 +240,7 @@ namespace Backend
             GuardarRol(r2);
             // Agregar una entrada de log para indicar que se han creado los roles de prueba
             String descripcionLog = "Se han creado los roles de prueba: " + r1.Nombre + ", " + r2.Nombre;
-            AgregarLog(new EntradaLog(admin, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
+            AgregarLog(new EntradaLog(null, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
         }
 
         /*
@@ -249,9 +249,6 @@ namespace Backend
          */
         public void crearProyectosDePrueba()
         {
-            // Obtener el primer usuario que es el admin para asociarlo al log
-            // (esto se hace al no tener una base de datos real)
-            Usuario admin = LeerUsuario(1);
             // Agregar un par de proyectos de prueba que estaran disponibles al iniciar la aplicacion
             Proyecto p1 = new Proyecto("SAX DSX", "SD", "Descripción del proyecto 1",DateTime.Now, false, false);
             Proyecto p2 = new Proyecto("Clash Eleven", "CE", "Descripción del proyecto 2", DateTime.Now, true, true);
@@ -261,7 +258,7 @@ namespace Backend
             GuardarProyecto(p3);
             // Agregar una entrada de log para indicar que se han creado los proyectos de prueba
             String descripcionLog = "Se han creado los proyectos de prueba: " + p1.Nombre + ", " + p2.Nombre + ", " + p3.Nombre;
-            AgregarLog(new EntradaLog(admin, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
+            AgregarLog(new EntradaLog(null, DateTime.Now, TipoEntradaLog.INFO, descripcionLog));
         }
 
         /*
@@ -271,8 +268,8 @@ namespace Backend
         public void Reiniciar()
         {
             crearRolesDePrueba();
-            crearUsuariosDePrueba();
             crearProyectosDePrueba();
+            crearUsuariosDePrueba();
         }
     }
 }

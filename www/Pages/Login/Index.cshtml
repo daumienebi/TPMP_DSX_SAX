@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model www.Pages.Login.IndexModel
 
 @{
@@ -17,6 +17,13 @@
     <div class="login">
 
         <h1>Identifícate</h1>
+
+        @if (TempData["MensajeExito"] is string mensajeExito)
+        {
+            <div style="background: #e8f5e9; border: 1px solid #c8e6c9; border-radius: 6px; padding: 0.6rem 0.75rem; margin-bottom: 0.8rem; font-size: 0.8rem; color: #2e7d32; text-align: center;">
+                @mensajeExito
+            </div>
+        }
 
         <form method="post">
 
