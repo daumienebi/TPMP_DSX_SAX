@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\seguridad\\serviciocifrado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\seguridad\\serviciocifrado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|c:\\users\\ddsak\\desktop\\uni\\validacion y pruebas\\tpmp_dsx_sax\\nucleo\\modelos\\entradalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74BCBD92-0426-B778-8916-174DC2A10170}|Nucleo\\Nucleo.csproj|solutionrelative:nucleo\\modelos\\entradalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServicioCifrado.cs",
-              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ServicioCifrado.cs",
-              "RelativeDocumentMoniker": "Nucleo\\Seguridad\\ServicioCifrado.cs",
-              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Seguridad\\ServicioCifrado.cs",
-              "RelativeToolTip": "Nucleo\\Seguridad\\ServicioCifrado.cs",
-              "ViewState": "AgIAAKcAAAAAAAAAAAAswK0AAAAlAAAAAAAAAA==",
+              "Title": "EntradaLog.cs",
+              "DocumentMoniker": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\EntradaLog.cs",
+              "RelativeDocumentMoniker": "Nucleo\\Modelos\\EntradaLog.cs",
+              "ToolTip": "C:\\Users\\ddsak\\Desktop\\UNI\\Validacion y Pruebas\\TPMP_DSX_SAX\\Nucleo\\Modelos\\EntradaLog.cs",
+              "RelativeToolTip": "Nucleo\\Modelos\\EntradaLog.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-28T17:10:19.563Z",
+              "WhenOpened": "2026-11-04T10:56:29.839Z",
               "EditorCaption": ""
             }
           ]

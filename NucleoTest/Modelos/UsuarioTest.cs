@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Nucleo.Modelos;
 using System;
+using System.Reflection;
 
 namespace NucleoTest.Modelos
 {
@@ -30,6 +31,33 @@ namespace NucleoTest.Modelos
             Assert.IsTrue(usuario.TieneCredencialesConfiguradas);
             Assert.AreEqual(fechaCad, usuario.FechaCaducidad);
             Assert.IsTrue(usuario.Pin >= 1000 && usuario.Pin <= 9999, "El PIN debe tener 4 dígitos.");
+        }
+
+        [TestMethod]
+        public void Propiedades_ModificanValoresCorrectamente()
+        {
+            DateTime fechaCad = DateTime.Now.AddDays(30);
+            Usuario usuario = new Usuario("Ana", "López", "ana@test.com", _rolPrueba, true, fechaCad, "Password123!");
+            Rol nuevoRol = new Rol("Editor", "Rol editor") { Id = 2 };
+            DateTime nuevaFecha = fechaCad.AddDays(30);
+
+            usuario.Id = 42;
+            usuario.Nombre = "Beatriz";
+            usuario.Apellidos = "Martín";
+            usuario.Email = "beatriz@test.com";
+            usuario.Activo = false;
+            usuario.TieneCredencialesConfiguradas = false;
+            usuario.FechaCaducidad = nuevaFecha;
+            usuario.Rol = nuevoRol;
+
+            Assert.AreEqual(42, usuario.Id);
+            Assert.AreEqual("Beatriz", usuario.Nombre);
+            Assert.AreEqual("Martín", usuario.Apellidos);
+            Assert.AreEqual("beatriz@test.com", usuario.Email);
+            Assert.IsFalse(usuario.Activo);
+            Assert.IsFalse(usuario.TieneCredencialesConfiguradas);
+            Assert.AreEqual(nuevaFecha, usuario.FechaCaducidad);
+            Assert.AreEqual(nuevoRol, usuario.Rol);
         }
 
         [TestMethod]
@@ -142,6 +170,36 @@ namespace NucleoTest.Modelos
         }
 
         [TestMethod]
+        public void ObtenerResultadoCalculoPin_PinMenorQue1000_LanzaInvalidOperationException()
+        {
+            Usuario usuario = new Usuario("Ana", "López", "ana@test.com", _rolPrueba, true, DateTime.Now.AddDays(30), "Password123!");
+            var pinField = typeof(Usuario).GetField("pin", BindingFlags.NonPublic | BindingFlags.Instance);
+            pinField!.SetValue(usuario, 999);
+
+            Assert.Throws<InvalidOperationException>(() => usuario.obtenerResultadoCalculoPin());
+        }
+
+        [TestMethod]
+        public void ObtenerResultadoCalculoPin_PinMayorQue10000_LanzaInvalidOperationException()
+        {
+            Usuario usuario = new Usuario("Ana", "López", "ana@test.com", _rolPrueba, true, DateTime.Now.AddDays(30), "Password123!");
+            var pinField = typeof(Usuario).GetField("pin", BindingFlags.NonPublic | BindingFlags.Instance);
+            pinField!.SetValue(usuario, 10001);
+
+            Assert.Throws<InvalidOperationException>(() => usuario.obtenerResultadoCalculoPin());
+        }
+
+        [TestMethod]
+        public void ObtenerResultadoCalculoPin_PinFormatoInvalido_LanzaInvalidOperationException()
+        {
+            Usuario usuario = new Usuario("Ana", "López", "ana@test.com", _rolPrueba, true, DateTime.Now.AddDays(30), "Password123!");
+            var pinField = typeof(Usuario).GetField("pin", BindingFlags.NonPublic | BindingFlags.Instance);
+            pinField!.SetValue(usuario, 10000);
+
+            Assert.Throws<InvalidOperationException>(() => usuario.obtenerResultadoCalculoPin());
+        }
+
+        [TestMethod]
         public void Equals_MismoUsuario_RetornaTrue()
         {
             DateTime fecha = new DateTime(2026, 12, 31);
@@ -150,24 +208,83 @@ namespace NucleoTest.Modelos
 
             Usuario u2 = new Usuario("Carlos", "Gómez", "carlos@test.com", _rolPrueba, true, fecha, "OtraClave!");
             u2.Id = 5;
-            // Para ser iguales según Equals de Usuario, deben coincidir id, nombre, apellidos, email, rol, activo, fechaCaducidad, pin, tieneCredencialesConfiguradas
-            // Asignamos el mismo PIN para comparar igualdad de campos del modelo
-            while (u2.Pin != u1.Pin)
-            {
-                u2.generarPin();
-            }
+
+            var pinField = typeof(Usuario).GetField("pin", BindingFlags.NonPublic | BindingFlags.Instance);
+            pinField!.SetValue(u2, u1.Pin);
 
             Assert.IsTrue(u1.Equals(u2));
         }
 
         [TestMethod]
-        public void Equals_DiferenteEmail_RetornaFalse()
+        public void Equals_DiferenciasIndividuales_RetornanFalse()
         {
             DateTime fecha = new DateTime(2026, 12, 31);
-            Usuario u1 = new Usuario("Carlos", "Gómez", "carlos@test.com", _rolPrueba, true, fecha, "Clave123!");
-            Usuario u2 = new Usuario("Carlos", "Gómez", "distinto@test.com", _rolPrueba, true, fecha, "Clave123!");
+            Usuario baseUser()
+            {
+                var u = new Usuario("Carlos", "Gómez", "carlos@test.com", _rolPrueba, true, fecha, "Clave123!");
+                u.Id = 5;
+                return u;
+            }
 
-            Assert.IsFalse(u1.Equals(u2));
+            var u1 = baseUser();
+            var pinField = typeof(Usuario).GetField("pin", BindingFlags.NonPublic | BindingFlags.Instance);
+            pinField!.SetValue(u1, 5555);
+
+            // Objeto de otro tipo
+            Assert.IsFalse(u1.Equals("cadena"));
+
+            // Diferente Id
+            var uId = baseUser();
+            pinField!.SetValue(uId, 5555);
+            uId.Id = 99;
+            Assert.IsFalse(u1.Equals(uId));
+
+            // Diferente Nombre
+            var uNom = baseUser();
+            pinField!.SetValue(uNom, 5555);
+            uNom.Nombre = "Otro";
+            Assert.IsFalse(u1.Equals(uNom));
+
+            // Diferente Apellidos
+            var uAp = baseUser();
+            pinField!.SetValue(uAp, 5555);
+            uAp.Apellidos = "OtroApellido";
+            Assert.IsFalse(u1.Equals(uAp));
+
+            // Diferente Email
+            var uMail = baseUser();
+            pinField!.SetValue(uMail, 5555);
+            uMail.Email = "otro@test.com";
+            Assert.IsFalse(u1.Equals(uMail));
+
+            // Diferente Rol
+            var uRol = baseUser();
+            pinField!.SetValue(uRol, 5555);
+            uRol.Rol = new Rol("Distinto", "Desc");
+            Assert.IsFalse(u1.Equals(uRol));
+
+            // Diferente Activo
+            var uAct = baseUser();
+            pinField!.SetValue(uAct, 5555);
+            uAct.Activo = false;
+            Assert.IsFalse(u1.Equals(uAct));
+
+            // Diferente Pin
+            var uPin = baseUser();
+            pinField!.SetValue(uPin, 6666);
+            Assert.IsFalse(u1.Equals(uPin));
+
+            // Diferente TieneCredencialesConfiguradas
+            var uCred = baseUser();
+            pinField!.SetValue(uCred, 5555);
+            uCred.TieneCredencialesConfiguradas = false;
+            Assert.IsFalse(u1.Equals(uCred));
+
+            // Diferente FechaCaducidad
+            var uFec = baseUser();
+            pinField!.SetValue(uFec, 5555);
+            uFec.FechaCaducidad = fecha.AddDays(10);
+            Assert.IsFalse(u1.Equals(uFec));
         }
 
         [TestMethod]
@@ -189,6 +306,26 @@ namespace NucleoTest.Modelos
             StringAssert.Contains(texto, "Lucía");
             StringAssert.Contains(texto, "Méndez");
             StringAssert.Contains(texto, "lucia@test.com");
+            StringAssert.Contains(texto, "Activo");
+        }
+
+        [TestMethod]
+        public void ToString_ValoresNulosYInactivo_MuestraFormatoPorDefecto()
+        {
+            Usuario usuario = new Usuario("Lucía", "Méndez", "lucia@test.com", _rolPrueba, false, DateTime.Now, "Clave123!");
+            usuario.Id = 11;
+            usuario.Nombre = null!;
+            usuario.Apellidos = null!;
+            usuario.Email = null!;
+            usuario.Rol = null!;
+            usuario.FechaCaducidad = default;
+
+            string texto = usuario.ToString();
+
+            StringAssert.Contains(texto, "Sin rol");
+            StringAssert.Contains(texto, "Inactivo");
+            StringAssert.Contains(texto, "Sin fecha");
+            StringAssert.Contains(texto, "sin-email");
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Nucleo.Seguridad;
 
@@ -54,6 +54,18 @@ namespace Pruebas.Nucleo.Seguridad
             Assert.IsFalse(ServicioHash.Verificar(string.Empty, string.Empty, string.Empty));
             Assert.IsFalse(ServicioHash.Verificar("texto", string.Empty, string.Empty));
             Assert.IsFalse(ServicioHash.Verificar(string.Empty, "hash", "sal"));
+        }
+
+        [TestMethod]
+        public void Verificar_SobrecargaResultadoHash_EntradasVaciasOBlancas_RetornaFalse()
+        {
+            var hashValido = ServicioHash.Generar("clave");
+            Assert.IsFalse(ServicioHash.Verificar(string.Empty, hashValido));
+            Assert.IsFalse(ServicioHash.Verificar("   ", hashValido));
+            Assert.IsFalse(ServicioHash.Verificar("texto", new ResultadoHash { Hash = string.Empty, Sal = hashValido.Sal }));
+            Assert.IsFalse(ServicioHash.Verificar("texto", new ResultadoHash { Hash = "   ", Sal = hashValido.Sal }));
+            Assert.IsFalse(ServicioHash.Verificar("texto", new ResultadoHash { Hash = hashValido.Hash, Sal = string.Empty }));
+            Assert.IsFalse(ServicioHash.Verificar("texto", new ResultadoHash { Hash = hashValido.Hash, Sal = "   " }));
         }
 
         [TestMethod]

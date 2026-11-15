@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Security.Cryptography;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Nucleo.Seguridad;
@@ -14,7 +14,7 @@ namespace NucleoTest.Seguridad
             string claveBase64 = ServicioCifrado.GenerarClave();
             byte[] clave = Convert.FromBase64String(claveBase64);
 
-            Assert.AreEqual(32, clave.Length, "La clave debe tener 32 bytes (AES-256).");
+            Assert.HasCount(32, clave, "La clave debe tener 32 bytes (AES-256).");
         }
 
         [TestMethod]
@@ -30,12 +30,23 @@ namespace NucleoTest.Seguridad
         }
 
         [TestMethod]
-        public void Cifrar_TextoVacio_DeberiaLanzarArgumentException()
+        public void Cifrar_TextoVacioOEspacios_DeberiaLanzarArgumentException()
         {
             string clave = ServicioCifrado.GenerarClave();
 
             Assert.Throws<ArgumentException>(() =>
                 ServicioCifrado.Cifrar(string.Empty, clave));
+            Assert.Throws<ArgumentException>(() =>
+                ServicioCifrado.Cifrar("   ", clave));
+        }
+
+        [TestMethod]
+        public void Cifrar_ClaveVaciaOEspacios_DeberiaLanzarArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() =>
+                ServicioCifrado.Cifrar("texto", string.Empty));
+            Assert.Throws<ArgumentException>(() =>
+                ServicioCifrado.Cifrar("texto", "   "));
         }
 
         [TestMethod]
@@ -49,12 +60,36 @@ namespace NucleoTest.Seguridad
         }
 
         [TestMethod]
-        public void Descifrar_ContenidoVacio_DeberiaLanzarArgumentException()
+        public void Cifrar_ClaveLongitudDistintaDe32Bytes_DeberiaLanzarArgumentException()
+        {
+            string texto = "dato";
+            // Clave base64 válida pero de 16 bytes en lugar de 32 bytes
+            string clave16Bytes = Convert.ToBase64String(new byte[16]);
+
+            Assert.Throws<ArgumentException>(() =>
+                ServicioCifrado.Cifrar(texto, clave16Bytes));
+        }
+
+        [TestMethod]
+        public void Descifrar_ContenidoVacioOEspacios_DeberiaLanzarArgumentException()
         {
             string clave = ServicioCifrado.GenerarClave();
 
             Assert.Throws<ArgumentException>(() =>
                 ServicioCifrado.Descifrar(string.Empty, clave));
+            Assert.Throws<ArgumentException>(() =>
+                ServicioCifrado.Descifrar("   ", clave));
+        }
+
+        [TestMethod]
+        public void Descifrar_ContenidoLongitudInsuficiente_DeberiaLanzarArgumentException()
+        {
+            string clave = ServicioCifrado.GenerarClave();
+            // Tamaño mínimo es 28 bytes (12 de nonce + 16 de etiqueta). Un contenido de 20 bytes debe fallar.
+            string contenidoCorto = Convert.ToBase64String(new byte[20]);
+
+            Assert.Throws<ArgumentException>(() =>
+                ServicioCifrado.Descifrar(contenidoCorto, clave));
         }
 
         [TestMethod]
@@ -81,10 +116,9 @@ namespace NucleoTest.Seguridad
 
             // Formato: [nonce (12)] [tag (16)] [ciphertext]
             const int TamanoNonce = 12;
-            const int TamanoEtiqueta = 16;
 
             // Corromper un byte dentro de la etiqueta para forzar fallo de autenticación
-            if (contenido.Length > TamanoNonce + 0)
+            if (contenido.Length > TamanoNonce)
             {
                 contenido[TamanoNonce] ^= 0xFF;
             }

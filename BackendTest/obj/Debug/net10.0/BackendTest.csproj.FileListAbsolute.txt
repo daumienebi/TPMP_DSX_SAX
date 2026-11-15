@@ -1,3 +1,4 @@
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\.msCoverageSourceRootsMapping_BackendTest
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\testhost.dll
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Microsoft.TestPlatform.AdapterUtilities.dll
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\testhost.exe
@@ -167,7 +168,11 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Deb
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\tr\MSTest.TestFramework.resources.dll
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\zh-Hans\MSTest.TestFramework.resources.dll
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\zh-Hant\MSTest.TestFramework.resources.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Backend.dll
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\MSTest.TestFramework.Extensions.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Nucleo.dll
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Backend.pdb
+C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Nucleo.pdb
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\MSTest.TestFramework.Extensions.xml
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\obj\Debug\net10.0\BackendTest.csproj.AssemblyReference.cache
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\obj\Debug\net10.0\BackendTest.GeneratedMSBuildEditorConfig.editorconfig
@@ -183,8 +188,3 @@ C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\obj\Deb
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\obj\Debug\net10.0\BackendTest.pdb
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\obj\Debug\net10.0\BackendTest.genruntimeconfig.cache
 C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\obj\Debug\net10.0\ref\BackendTest.dll
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\.msCoverageSourceRootsMapping_BackendTest
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Backend.dll
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Nucleo.dll
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Backend.pdb
-C:\Users\ddsak\Desktop\UNI\Validacion y Pruebas\TPMP_DSX_SAX\BackendTest\bin\Debug\net10.0\Nucleo.pdb
