@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumTests
@@ -20,7 +20,7 @@ namespace SeleniumTests
         [ClassInitialize]
         public static void InitializeClass(TestContext testContext)
         {
-            driver = new FirefoxDriver();
+            driver = new EdgeDriver();
             baseURL = "https://www.google.com/";
         }
         
