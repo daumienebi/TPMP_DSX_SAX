@@ -1,8 +1,25 @@
-**/obj/
+## Visual Studio temporary and user files
+.vs/
+**/.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
 
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+## Build Folders
 [Bb]in/
 [Oo]bj/
+**/[Bb]in/
+**/[Oo]bj/
+**/bin/
+**/obj/
+
+## Test results
+[Tt]est[Rr]esults/
+**/[Tt]est[Rr]esults/
+*.coverage
+*.coveragexml
+*.cobertura.xml
 
 # Logs
 Logs/
