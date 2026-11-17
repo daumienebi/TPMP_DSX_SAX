@@ -61,7 +61,7 @@ namespace SeleniumTests
             driver.FindElement(By.Id("btnSiguiente")).Click();
             driver.FindElement(By.Id("txtContraseña")).Click();
             driver.FindElement(By.Id("txtContraseña")).Clear();
-            driver.FindElement(By.Id("txtContraseña")).SendKeys("password22");
+            driver.FindElement(By.Id("txtContraseña")).SendKeys("password1");
             driver.FindElement(By.Id("btnAceptar")).Click();
             driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Contraseña'])[1]/following::span[1]")).Click();
             try

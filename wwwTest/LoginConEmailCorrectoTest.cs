@@ -60,7 +60,7 @@ namespace SeleniumTests
             driver.FindElement(By.Id("txtUsuario")).SendKeys("a@a.com");
             driver.FindElement(By.Id("btnSiguiente")).Click();
             driver.FindElement(By.Id("txtContraseña")).Clear();
-            driver.FindElement(By.Id("txtContraseña")).SendKeys("Password@2");
+            driver.FindElement(By.Id("txtContraseña")).SendKeys("password1");
             driver.FindElement(By.Id("btnAceptar")).Click();
             driver.Navigate().GoToUrl("https://localhost:7226/Principal");
             try

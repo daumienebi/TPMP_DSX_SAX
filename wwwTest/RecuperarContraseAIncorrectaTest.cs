@@ -54,8 +54,6 @@ namespace SeleniumTests
         [TestMethod]
         public void TheRecuperarContraseAIncorrectaTest()
         {
-            driver.Navigate().GoToUrl(baseURL + "chrome://newtab/");
-            driver.Navigate().GoToUrl(baseURL + "chrome://newtab/");
             driver.Navigate().GoToUrl("https://localhost:7226/Login/Index");
             driver.FindElement(By.Id("txtUsuario")).Click();
             driver.FindElement(By.Id("txtUsuario")).Clear();
